@@ -35,3 +35,4 @@ Route::get('/agendamentos/index', 'App\Http\Controllers\AgendamentosController@i
 Route::post('/agendamentos/index', 'App\Http\Controllers\AgendamentosController@storeData')->name('registrar_data');
 Route::post('/agendamentos/agendamento', 'App\Http\Controllers\AgendamentosController@store')->name('registrar_agendamento');
 Route::post('/agendamentos/editar', 'App\Http\Controllers\AgendamentosController@update')->name('alterar_agendamento');
+Route::get('/agendamentos/relatorioCondicionalPDF', 'App\Http\Controllers\AgendamentosController@relatorioCondicionalPDF')->name('relatorioCondicionalPDF_agendamentos');

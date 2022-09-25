@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                        <label id="leila" style="text-shadow: 8px 3px 3px rgba(141, 138, 138, 0.822); font-weight: 400; font-size: 18px;">LEILA CABELEIREIRA</label>
                     </a>
                 </div>
 
@@ -14,6 +14,12 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('listar_servicos')" :active="request()->routeIs('listar_servicos')">
+                        {{ __('Serviços') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('listar_agendamentos')" :active="request()->routeIs('listar_agendamentos')">
+                        {{ __('Agendamento') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -79,7 +85,6 @@
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
